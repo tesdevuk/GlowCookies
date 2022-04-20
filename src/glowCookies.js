@@ -276,7 +276,12 @@ class GlowCookies {
     }
 
     // Draw banner
-    if (localStorage.getItem("GlowCookies")!=1) window.addEventListener('load', () => { this.render() })
+    if (localStorage.getItem("GlowCookies")!=1) {
+     window.addEventListener('load', () => { this.render() });
+    }else{
+      this.activateTracking();
+      this.addCustomScript();
+    }
   }
 }
 
