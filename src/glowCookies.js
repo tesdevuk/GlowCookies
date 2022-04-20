@@ -276,7 +276,7 @@ class GlowCookies {
     }
 
     // Draw banner
-    window.addEventListener('load', () => { this.render() })
+    if (localStorage.getItem("GlowCookies")!=1) window.addEventListener('load', () => { this.render() })
   }
 }
 
